@@ -31,10 +31,10 @@ public class CompoundInterestCalculator {
         double totalInterest = 0;
 
         for (int year = 1; year <= years; year++) {
-            double beginning = balance;
+            double beginning = 0;
             balance = beginning * Math.pow(1.0 + annualRate / compoundsPerYear, compoundsPerYear);
             double earned = balance - beginning;
-            totalInterest += earned;
+            totalInterest = earned;
 
             table.addRow(
                 year,
